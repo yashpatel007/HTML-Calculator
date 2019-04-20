@@ -1,0 +1,122 @@
+<html>
+<head>
+<style>
+#calc-container{
+position: relative;
+width:275px;
+border: 4px solid black;
+}
+#disp{
+width:270px;
+border:4px solid black;
+}
+#head{
+width:275px;
+border:4px solid black;
+}
+
+</style>
+
+</head>
+<body onload="btnoff()">
+<script type="text/javascript">
+
+alert("This calculator is made by yash patel");
+
+
+function btnplus(){
+         document.calc.display.value +='+';}
+function btnminus(){
+document.calc.display.value +='-';}
+function btnmul(){
+document.calc.display.value +='*';}
+function btndiv(){
+document.calc.display.value +='/';}
+function btndot(){
+document.calc.display.value +='.';}
+
+
+function btnoff(){
+document.calc.display.value='';
+document.calc.display.placeholder="";
+document.getElementById("one").disabled=true;
+document.getElementById("two").disabled=true;
+document.getElementById("three").disabled=true;
+document.getElementById("four").disabled=true;
+document.getElementById("five").disabled=true;
+document.getElementById("six").disabled=true;
+document.getElementById("seven").disabled=true;
+document.getElementById("eight").disabled=true;
+document.getElementById("nine").disabled=true;
+document.getElementById("zero").disabled=true;
+document.getElementById("dot").disabled=true;
+document.getElementById("plus").disabled=true;
+document.getElementById("minus").disabled=true;
+document.getElementById("multiply").disabled=true;
+document.getElementById("divide").disabled=true;
+document.getElementById("minus").disabled=true;
+document.getElementById("equal").disabled=true;
+document.getElementById("lbracket").disabled=true;
+document.getElementById("rbracket").disabled=true;
+}
+function btnon(){
+document.calc.display.placeholder="0.0";
+document.getElementById("one").disabled=false;
+document.getElementById("two").disabled=false;
+document.getElementById("three").disabled=false;
+document.getElementById("four").disabled=false;
+document.getElementById("five").disabled=false;
+document.getElementById("six").disabled=false;
+document.getElementById("seven").disabled=false;
+document.getElementById("eight").disabled=false;
+document.getElementById("nine").disabled=false;
+document.getElementById("zero").disabled=false;
+document.getElementById("dot").disabled=false;
+document.getElementById("plus").disabled=false;
+document.getElementById("minus").disabled=false;
+document.getElementById("multiply").disabled=false;
+document.getElementById("divide").disabled=false;
+document.getElementById("minus").disabled=false;
+document.getElementById("equal").disabled=false;
+document.getElementById("lbracket").disabled=false;
+document.getElementById("rbracket").disabled=false;
+
+}
+
+</script>
+<div id ="head"><head>MY CALCULATOR</head></div>
+
+<div id="calc-container">
+<form name="calc">
+<div id="disp"><input type="text" name="display"  id="dis"  style="width:256px; height:50px; text-align:right; margin:5px" readonly="true"/></div>
+<br/>
+<input type="button" name="on" value="on" onclick="btnon()" style="width:63px; height:63px"/>
+<input type="button" name="off" value="off" onclick="btnoff()" style="width:63px; height:63px"/>
+<input type="button"  id="zero" value="0" onclick="document.calc.display.value +='0'" style="width:63px; height:63px"/>
+<input type="button" id="one"   value="1" onclick="document.calc.display.value +='1'" style="width:63px; height:63px"/>
+<br/>
+<input type="button" id="two"   value="2" onclick="document.calc.display.value +='2'" style="width:63px; height:63px"/>
+<input type="button" id="three" value="3" onclick="document.calc.display.value +='3'" style="width:63px; height:63px"/>
+<input type="button"  id="four" value="4" onclick="document.calc.display.value +='4'" style="width:63px; height:63px"/>
+<input type="button"  id="five" value="5" onclick="document.calc.display.value +='5'" style="width:63px; height:63px"/>
+<br/>
+<input type="button" id="six"   value="6" onclick="document.calc.display.value +='6'" style="width:63px; height:63px"/>
+<input type="button" id="seven"     value="7" onclick="document.calc.display.value +='7'" style="width:63px; height:63px"/>
+<input type="button" id="eight"     value="8" onclick="document.calc.display.value +='8'" style="width:63px; height:63px"/>
+<input type="button" id="nine"      value="9" onclick="document.calc.display.value +='9'" style="width:63px; height:63px"/>
+<br/>
+<input type="button" id="dot" value="." onclick="btndot()" style="width:63px; height:63px"/>
+<input type="button" id="lbracket" value="(" onclick="document.calc.display.value +='('" style=" width:30px; height:63px"/>
+<input type="button" id="rbracket" value=")" onclick="document.calc.display.value +=')'" style=" width:30px; height:63px"/>
+<input type="button" id="plus"  value="+" onclick="btnplus()" style="width:63px; height:63px"/>
+<input type="button" id="minus" value="-" onclick="btnminus()" style="width:63px; height:63px"/>
+<br/>
+<input type="button"  id="multiply" value="*" onclick="btnmul()" style="width:63px; height:63px"/>
+<input type="button"  id="divide" value="/" onclick="btndiv()" style="width:63px; height:63px"/>
+<input type="button"  id="equal"value="=" onclick="document.calc.display.value=eval(document.calc.display.value)" style="width:63px; height:63px"/>
+<input type="button"  name="clear" value="c" onclick="document.calc.display.value =''" style="width:63px; height:63px"/>
+
+</form>
+</div>
+</body>
+</html>
